@@ -20,15 +20,15 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - matplotlib-base
-    - numba
-    - numpy
+    - matplotlib-base >=3.1
+    - numba >=0.50
+    - numpy >=1.18
     - python >=3.6
-    - scipy
-    - sympy
-    - h5py
-    - pandas
-    - tqdm
+    - scipy >=1.4
+    - sympy >=1.5
+    - h5py >=2.10
+    - pandas >=1.0
+    - tqdm >=4.45
     - ffmpeg
 
 test:
@@ -40,6 +40,7 @@ test:
     - pde.solvers
     - pde.storage
     - pde.visualization
+    - pde.tools.numba
   commands:
     - pip check
   requires:
