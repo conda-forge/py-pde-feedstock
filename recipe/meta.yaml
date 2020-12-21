@@ -1,5 +1,5 @@
 {% set name = "py-pde" %}
-{% set version = "0.12.4" %}
+{% set version = "0.12.6" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/py-pde-{{ version }}.tar.gz
-  sha256: b8b5a1a36eeb544abe8658aae21b45862bc752fa7e5ca446bd8069c397c16470
+  sha256: 7b54bb9402d4ea08844c54a67c917e19e894170f0a81e09e0ad4e4e779fb519e
 
 build:
   number: 0
