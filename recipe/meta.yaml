@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
   run:
     - matplotlib-base >=3.1
     - numba >=0.50
