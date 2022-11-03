@@ -9,6 +9,16 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/py-pde-feedstoc
 
 Summary: Python package for solving partial differential equations
 
+Documentation: https://py-pde.readthedocs.io
+
+py-pde is a Python package for solving partial differential equations (PDEs).
+The package provides classes for grids on which scalar and tensor fields can be defined.
+The associated differential operators are computed using a numba-compiled implementation of finite differences.
+This allows defining, inspecting, and solving typical PDEs that appear for instance in the study of dynamical systems in physics.
+The focus of the package lies on easy usage to explore the behavior of PDEs.
+However, core computations can be compiled transparently using numba for speed.
+
+
 Current build status
 ====================
 
