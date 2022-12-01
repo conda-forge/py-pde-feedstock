@@ -17,8 +17,9 @@ build:
 
 requirements:
   host:
-    - pip
     - python >=3.8
+    - pip
+    - setuptools_scm
   run:
     - matplotlib-base >=3.1
     - numba >=0.56
@@ -32,6 +33,8 @@ requirements:
     - ffmpeg
 
 test:
+  requires:
+    - pip
   imports:
     - pde
     - pde.fields
@@ -43,8 +46,8 @@ test:
     - pde.tools.numba
   commands:
     - pip check
-  requires:
-    - pip
+    # Check whether the pip version is reported correctly
+    - pip list | grep -i {{ name }} | grep {{ version }}
 
 about:
   home: https://github.com/zwicker-group/py-pde
