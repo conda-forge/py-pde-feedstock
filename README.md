@@ -1,11 +1,11 @@
-About py-pde
-============
+About py-pde-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/py-pde-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/zwicker-group/py-pde
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/py-pde-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python package for solving partial differential equations
 
