@@ -1,5 +1,5 @@
 {% set name = "py-pde" %}
-{% set version = "0.37.1" %}
+{% set version = "0.38.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/py-pde-{{ version }}.tar.gz
-  sha256: a58100a1ed46a7c88eadb981a84ee06e13d396b8953662938482122eff007e12
+  sha256: fd2cc441333b24860f14cacaed97bea14dfeb8cf0a5fcbe7a031d9e85145a6dd
 
 build:
   number: 0
@@ -17,21 +17,21 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.12
+    - python >=3.9,<3.13
     - pip
     - setuptools_scm
   run:
     - ffmpeg
+    - ffmpeg-python >=0.2
     - h5py >=2.10
     - matplotlib-base >=3.1
-    - numba >=0.56
+    - numba >=0.59
     - numpy >=1.22
-    - pandas >=1.2
-    - pyfftw >=0.12
-    - python >=3.8,<3.12
+    - pandas >=2
+    - python >=3.9,<3.13
     - scipy >=1.10
     - sympy >=1.9
-    - tqdm >=4.60
+    - tqdm >=4.66
 
 test:
   requires:
