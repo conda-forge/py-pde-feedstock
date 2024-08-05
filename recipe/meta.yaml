@@ -1,5 +1,5 @@
 {% set name = "py-pde" %}
-{% set version = "0.40.0" %}
+{% set version = "0.41.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/py_pde-{{ version }}.tar.gz
-  sha256: 17605c0aaead6155017b17b95303fd34d009e4b5d1f7f5784434855599ba59d8
+  sha256: 78bc52c1bd7fbc78c6f9afaaaeada2e4827f1985fc540d032471061463488010
 
 build:
   noarch: python
@@ -21,7 +21,6 @@ requirements:
     - setuptools_scm
   run:
     - ffmpeg
-    - ffmpeg-python >=0.2
     - h5py >=2.10
     - matplotlib-base >=3.1
     - numba >=0.59
