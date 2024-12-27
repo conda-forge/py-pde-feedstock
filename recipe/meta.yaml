@@ -12,11 +12,11 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps . -vvv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9,<3.13
+    - python {{ python_min }}
     - pip
     - setuptools_scm
   run:
@@ -27,7 +27,7 @@ requirements:
     - numba >=0.59
     - numpy >=1.22
     - pandas >=2
-    - python >=3.9,<3.13
+    - python >={{ python_min }},<3.13
     - scipy >=1.10
     - sympy >=1.9
     - tqdm >=4.66
@@ -35,6 +35,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - pde
     - pde.fields
