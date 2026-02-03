@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps . -vvv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -31,6 +31,7 @@ requirements:
     - scipy >=1.10
     - sympy >=1.9
     - tqdm >=4.66
+    - typing_extensions>=4.10
 
 test:
   requires:
