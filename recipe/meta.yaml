@@ -37,6 +37,8 @@ test:
   requires:
     - pip
     - python {{ python_min }}
+  commands:
+    - python -c "import importlib; print('importlib file:', getattr(importlib,'__file__', None)); import importlib.util; print('importlib.util OK')"
   imports:
     - pde
     - pde.fields
