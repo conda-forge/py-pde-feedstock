@@ -38,20 +38,17 @@ test:
     - pip
     - python {{ python_min }}
   commands:
-    # add hack to remove spurious `importlib`, which was installed by some package
+    # If some dependency pulls in a third-party `importlib`, remove it before imports run
     - python -c "import sys, subprocess; subprocess.run([sys.executable,'-m','pip','uninstall','-y','importlib'], check=False)"
-    # test that importlib can be imported correctly
+
+    # Verify stdlib importlib is being used
     - python -c "import importlib; print('importlib file:', getattr(importlib,'__file__', None)); import importlib.util; print('importlib.util OK')"
+
+    # Now run the import checks (these used to be in `imports:`)
+    - python -c "import pde; import pde.fields; import pde.grids; import pde.pdes; import pde.solvers; import pde.storage; import pde.visualization"
+
     - pip check
     - pip list | grep -i {{ name }} | grep {{ version }}
-  imports:
-    - pde
-    - pde.fields
-    - pde.grids
-    - pde.pdes
-    - pde.solvers
-    - pde.storage
-    - pde.visualization
 
 about:
   home: https://github.com/zwicker-group/py-pde
