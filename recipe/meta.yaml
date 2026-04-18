@@ -1,5 +1,6 @@
 {% set name = "py-pde" %}
 {% set version = "0.53.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
