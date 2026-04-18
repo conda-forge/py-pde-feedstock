@@ -39,6 +39,8 @@ test:
     - python {{ python_min }}
   commands:
     - python -c "import importlib; print('importlib file:', getattr(importlib,'__file__', None)); import importlib.util; print('importlib.util OK')"
+    - pip check
+    - pip list | grep -i {{ name }} | grep {{ version }}
   imports:
     - pde
     - pde.fields
@@ -47,10 +49,6 @@ test:
     - pde.solvers
     - pde.storage
     - pde.visualization
-  commands:
-    - pip check
-    # Check whether the pip version is reported correctly
-    - pip list | grep -i {{ name }} | grep {{ version }}
 
 about:
   home: https://github.com/zwicker-group/py-pde
