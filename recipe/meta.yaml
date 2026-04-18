@@ -38,6 +38,9 @@ test:
     - pip
     - python {{ python_min }}
   commands:
+    # add hack to remove spurious `importlib`, which was installed by some package
+    - python -c "import sys, subprocess; subprocess.run([sys.executable,'-m','pip','uninstall','-y','importlib'], check=False)"
+    # test that importlib can be imported correctly
     - python -c "import importlib; print('importlib file:', getattr(importlib,'__file__', None)); import importlib.util; print('importlib.util OK')"
     - pip check
     - pip list | grep -i {{ name }} | grep {{ version }}
