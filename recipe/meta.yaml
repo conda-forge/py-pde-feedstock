@@ -1,13 +1,13 @@
 {% set name = "py-pde" %}
-{% set version = "0.58.0" %}
+{% set version = "0.59.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/py_pde-{{ version }}.tar.gz
-  sha256: f0706e05d8cf1cd9aeb75c72a8599464c32d8ff2a1828620b5048eb9458b5332
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/py_pde-{{ version }}.tar.gz
+  sha256: 5a3e4c93eca6756a2fb0ae98bc05f806783c07d2f39b451f47cc0c07d03784c8
 
 build:
   noarch: python
